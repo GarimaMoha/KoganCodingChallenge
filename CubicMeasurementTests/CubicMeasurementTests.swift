@@ -1,10 +1,3 @@
-//
-//  CubicMeasurementTests.swift
-//  CubicMeasurementTests
-//
-//  Created by Saurav Mishra on 28/4/21.
-//
-
 import XCTest
 @testable import CubicMeasurement
 

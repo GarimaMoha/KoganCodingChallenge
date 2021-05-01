@@ -15,6 +15,10 @@
 		154C0FFD2638FF0D007F063A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154C0FFB2638FF0D007F063A /* LaunchScreen.storyboard */; };
 		154C10082638FF0D007F063A /* CubicMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C10072638FF0D007F063A /* CubicMeasurementTests.swift */; };
 		154C10132638FF0D007F063A /* CubicMeasurementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C10122638FF0D007F063A /* CubicMeasurementUITests.swift */; };
+		154C1028263901C0007F063A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C1027263901C0007F063A /* Model.swift */; };
+		154C10312639045C007F063A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C10302639045C007F063A /* Service.swift */; };
+		154C103926390C0A007F063A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C103826390C0A007F063A /* Constants.swift */; };
+		154C103F26391071007F063A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C103E26391071007F063A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		154C100E2638FF0D007F063A /* CubicMeasurementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubicMeasurementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		154C10122638FF0D007F063A /* CubicMeasurementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubicMeasurementUITests.swift; sourceTree = "<group>"; };
 		154C10142638FF0D007F063A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		154C1027263901C0007F063A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		154C10302639045C007F063A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		154C103826390C0A007F063A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		154C103E26391071007F063A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,9 @@
 		154C0FE42638FF0B007F063A = {
 			isa = PBXGroup;
 			children = (
+				154C103D26391058007F063A /* ViewModel */,
+				154C102F2639043F007F063A /* Service */,
+				154C1026263901B0007F063A /* Model */,
 				154C0FEF2638FF0B007F063A /* CubicMeasurement */,
 				154C10062638FF0D007F063A /* CubicMeasurementTests */,
 				154C10112638FF0D007F063A /* CubicMeasurementUITests */,
@@ -126,6 +137,31 @@
 				154C10142638FF0D007F063A /* Info.plist */,
 			);
 			path = CubicMeasurementUITests;
+			sourceTree = "<group>";
+		};
+		154C1026263901B0007F063A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				154C1027263901C0007F063A /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		154C102F2639043F007F063A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				154C10302639045C007F063A /* Service.swift */,
+				154C103826390C0A007F063A /* Constants.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		154C103D26391058007F063A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				154C103E26391071007F063A /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +296,11 @@
 			files = (
 				154C0FF52638FF0B007F063A /* ViewController.swift in Sources */,
 				154C0FF12638FF0B007F063A /* AppDelegate.swift in Sources */,
+				154C10312639045C007F063A /* Service.swift in Sources */,
 				154C0FF32638FF0B007F063A /* SceneDelegate.swift in Sources */,
+				154C1028263901C0007F063A /* Model.swift in Sources */,
+				154C103926390C0A007F063A /* Constants.swift in Sources */,
+				154C103F26391071007F063A /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  CubicMeasurement
-//
-//  Created by Saurav Mishra on 28/4/21.
-//
-
 import UIKit
 
 @main

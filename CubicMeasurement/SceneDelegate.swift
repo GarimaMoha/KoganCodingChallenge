@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  CubicMeasurement
-//
-//  Created by Saurav Mishra on 28/4/21.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
