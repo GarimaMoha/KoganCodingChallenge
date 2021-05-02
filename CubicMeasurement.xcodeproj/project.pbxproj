@@ -19,6 +19,7 @@
 		154C10312639045C007F063A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C10302639045C007F063A /* Service.swift */; };
 		154C103926390C0A007F063A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C103826390C0A007F063A /* Constants.swift */; };
 		154C103F26391071007F063A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C103E26391071007F063A /* ViewModel.swift */; };
+		154C1056263ECE83007F063A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C1055263ECE83007F063A /* ViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		154C10302639045C007F063A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		154C103826390C0A007F063A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		154C103E26391071007F063A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		154C1055263ECE83007F063A /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				154C10072638FF0D007F063A /* CubicMeasurementTests.swift */,
 				154C10092638FF0D007F063A /* Info.plist */,
+				154C1055263ECE83007F063A /* ViewModelTests.swift */,
 			);
 			path = CubicMeasurementTests;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154C1056263ECE83007F063A /* ViewModelTests.swift in Sources */,
 				154C10082638FF0D007F063A /* CubicMeasurementTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

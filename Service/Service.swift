@@ -1,7 +1,12 @@
 
 import Foundation
 
-final class Service {
+protocol ServiceCallDelegate: AnyObject {
+    func makeServiceCall(to uri: String, completion: @escaping(Result<Equipments, NSError>) -> Void)
+}
+
+final class Service: ServiceCallDelegate  {
+    
         func makeServiceCall(to uri: String, completion: @escaping (Result<Equipments, NSError>) -> Void) {
             let format = String(format: Constants.url + uri)
             let url = URL(string: format)!

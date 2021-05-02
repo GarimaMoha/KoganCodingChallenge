@@ -12,7 +12,7 @@ final class ViewModel {
     weak var delegate: ServiceDelegate?
     private var results: [Equipments] = []
     
-    private enum State: Equatable {
+    enum State: Equatable {
         case none
         case loading
         case success([Equipments])
@@ -24,13 +24,13 @@ final class ViewModel {
         static let conversionFactor = 250.0
     }
     
-    func fetchData(service: Service = Service(), uri: String) {
+    func fetchData(service: ServiceCallDelegate = Service(), uri: String) {
         self.state = .loading
         service.makeServiceCall(to: uri) { [weak self] result in
             switch result {
             case .success(let equipments):
+                self?.results.append(equipments)
                 if let uri = equipments.next {
-                    self?.results.append(equipments)
                     self?.fetchData(uri: uri)
                 } else {
                     self?.state = .success(self?.results ?? [])
@@ -52,7 +52,7 @@ final class ViewModel {
         }
     }
     
-    private var state: State = .none {
+    private(set) var state: State = .none {
         didSet {
             guard oldValue != state else {
                 return
@@ -78,6 +78,11 @@ final class ViewModel {
         }
         
         let airConditioners = equipments.flatMap(filterAirConditioners)
+        
+        guard airConditioners.count > 0 else {
+            return .zero
+        }
+        
         let totalWeight = airConditioners.reduce(.zero, cubicWeight)
         
         let averageWeight = totalWeight / Double(airConditioners.count)
