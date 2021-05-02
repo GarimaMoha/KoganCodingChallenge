@@ -11,6 +11,7 @@ final class ViewModelTests: XCTestCase {
         super.setUp()
         mockServiceStateDelegate = MockServiceDelegate()
         mockService = MockService()
+        viewModel = ViewModel()
         
     }
     
@@ -22,7 +23,6 @@ final class ViewModelTests: XCTestCase {
     }
     
    func testLoadingState() {
-    viewModel = ViewModel()
     mockService.equipment = Equipments(objects: [Objects(category: "Air Conditioners", weight: 70.0, size: Size(width: 40.0, length: 40.0, height: 50.0))], next: "hi")
     viewModel.fetchData(service: mockService, uri: "")
     
@@ -31,14 +31,12 @@ final class ViewModelTests: XCTestCase {
     }
     
     func testLoadingStateText() {
-        viewModel = ViewModel()
         viewModel.fetchData(service: mockService, uri: "")
         
         XCTAssertEqual(viewModel.text, "Loading")
     }
     
     func testSuccessStateText() {
-        viewModel = ViewModel()
         mockService.equipment = Equipments(objects: [Objects(category: "Air Conditioners", weight: 70.0, size: Size(width: 40.0, length: 40.0, height: 50.0))], next: nil)
         viewModel.fetchData(service: mockService, uri: "MockURI")
       
@@ -46,7 +44,6 @@ final class ViewModelTests: XCTestCase {
     }
     
     func testSuccessStateEmptyObjects() {
-        viewModel = ViewModel()
         mockService.equipment = Equipments(objects: [], next: nil)
         viewModel.fetchData(service: mockService, uri: "MockURI")
       
@@ -54,7 +51,6 @@ final class ViewModelTests: XCTestCase {
     }
         
     func testFailureStateText() {
-        viewModel = ViewModel()
         mockService.error = NSError(domain: "Domain", code: 0, userInfo: nil)
         viewModel.fetchData(service: mockService, uri: "MockURI")
       
